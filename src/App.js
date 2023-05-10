@@ -1,11 +1,16 @@
 import { Stack, Typography } from '@mui/material';
 import './App.css';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import HomePage from './pages/home';
 
 function App() {
   return (
-    <Stack>
-      <Typography>Voluntário Dev</Typography>
-    </Stack>
+    <BrowserRouter>
+      <Routes>
+        <Route path='/' element={<App />} />
+        <Route path='/home' element={<HomePage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
